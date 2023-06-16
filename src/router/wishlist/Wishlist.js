@@ -8,8 +8,13 @@ function Wishlist() {
     console.log(heart);
     return (
         <div className='container'>
-            <ProductWrapper data={heart}/>
+        {
+            heart.length ?
+            <ProductWrapper data={heart} />
+            : 
             <Empty title="Sevimlilar" />
+        }
+
         </div>
     )
 }

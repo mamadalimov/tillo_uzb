@@ -4,13 +4,15 @@ import {
   AiFillStar,
   AiOutlineHeart,
   AiOutlineShoppingCart,
+  AiFillHeart
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToHeart, removeFromHeart } from "../../context/heart";
-
-function ProductWrapper({data}) {
+import { useSelector } from "react-redux";
+function ProductWrapper({ data }) {
   const dispatch = useDispatch();
+const heart =useSelector(s => s.heart.value)
   return (
     <div className="products">
       {data?.map((item) => (
@@ -19,7 +21,12 @@ function ProductWrapper({data}) {
             <img src={item.url} alt="" />
           </Link>
           <button className="card__heart">
-            <AiOutlineHeart onClick={() => dispatch(addToHeart(item))} />
+     {
+      heart.some(i=> i.id === item.id) ?
+      <AiFillHeart onClick={ ()=> dispatch(removeFromHeart(item))}/>:
+      <AiOutlineHeart onClick={() => dispatch(addToHeart(item))} />
+     }
+            
           </button>
           <div className="card__body">
             <p className="card__title">{item.title}</p>
