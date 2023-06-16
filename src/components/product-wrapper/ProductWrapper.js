@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToHeart, removeFromHeart } from "../../context/heart";
 import { useSelector } from "react-redux";
+import { addToCart } from "../../context/cart";
+
+
 function ProductWrapper({ data }) {
   const dispatch = useDispatch();
 const heart =useSelector(s => s.heart.value)
@@ -42,7 +45,7 @@ const heart =useSelector(s => s.heart.value)
                 <del>{Math.round(item.price * 1.5)} so'm</del>
                 <p>{item.price} so'm</p>
               </div>
-              <button className="price__cart">
+              <button onClick={()=> dispatch(addToCart(item))} className="price__cart">
                 <AiOutlineShoppingCart />
               </button>
             </div>
