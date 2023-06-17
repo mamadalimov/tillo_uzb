@@ -8,9 +8,15 @@ function Cart() {
   const cart = useSelector(s=> s.cart.value)
   console.log(cart);
   return (
-    <div className='container'>
-      <CartWrapper/>
-      <Empty title="Savat" />
+    <div className='container'>  
+
+      {
+        cart.length?
+        <CartWrapper data={cart} />:
+        <Empty title="Savat" />
+
+      }
+
     </div>
   )
 }

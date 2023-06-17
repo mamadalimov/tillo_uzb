@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    value: []
+value: JSON.parse(localStorage.getItem("uzum-heart")) || []
 }
 
 const heartSlice = createSlice({
@@ -11,11 +11,14 @@ const heartSlice = createSlice({
         addToHeart: (state, action)=>{
             let index = state.value.findIndex(i => i.id === action.payload.id)
             if(index < 0){
-                state.value = [...state.value, action.payload]
+            state.value = [...state.value, action.payload]
+            localStorage.setItem("uzum-heart", JSON.stringify(state.value))
+
             }
         },
         removeFromHeart: (state, action)=>{
             state.value = state.value.filter(i => i.id !== action.payload.id)
+            localStorage.setItem("uzum-heart", JSON.stringify(state.value))
         }
     }
 })
