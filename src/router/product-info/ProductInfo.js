@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { AiFillStar, AiOutlineHeart, AiOutlineShopping } from "react-icons/ai";
 import "./ProductInfo.css";
 
 function ProductInfo() {
   const data = useLocation().state;
-
+   useEffect(()=>{
+    window.scrollTo(0,0)
+   },[])
   const [amount, setAmout] = useState(1);
 
   return (

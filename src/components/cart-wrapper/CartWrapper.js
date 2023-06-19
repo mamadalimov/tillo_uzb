@@ -8,8 +8,6 @@ import { addToCart,removeFromHeart,decrementCart } from '../../context/cart';
 
 function CartWrapper({data}) {
   const dispatch =useDispatch()
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     var text1 = document.getElementById("text1").value;
