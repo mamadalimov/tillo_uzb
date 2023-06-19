@@ -15,7 +15,7 @@ function CartWrapper({data}) {
     var text1 = document.getElementById("text1").value;
     var text2 = document.getElementById("text2").value;
 
-    var my_text = `Result is:%0A - Ismi: ${text1} %0A - Telfon raqami: ${text2} ` ;
+    var my_text = `Result is:%0A  Ismi: ${text1} %0A  Telfon raqami: ${text2} %0A Jami: ${data?.reduce((a,b)=>a+ (b.price*b.quantitiy), 0)} ` ;
 
     var token = "6136164070:AAGMcY6F0Zcz-lpAUQwctsFFrTmMInRoT3o";
     var chat_id = -978459049;
