@@ -15,7 +15,7 @@ function CartWrapper({data}) {
     var text1 = document.getElementById("text1").value;
     var text2 = document.getElementById("text2").value;
 
-    var my_text = `Result is:%0A - Text1: ${text1} %0A - Text2: ${text2} ` ;
+    var my_text = `Result is:%0A - Ismi: ${text1} %0A - Telfon raqami: ${text2} ` ;
 
     var token = "6136164070:AAGMcY6F0Zcz-lpAUQwctsFFrTmMInRoT3o";
     var chat_id = -978459049;
@@ -70,8 +70,8 @@ function CartWrapper({data}) {
       <div className="cart__wrapper_form">
       <form id='form' onSubmit={handleSubmit}>
        <h3>buyurtma berish</h3>
-       <input type="text" id='text1'  />
-       <input type="text" id='text2'  />     
+       <input placeholder='Ismingizni kiriting' type="text" id='text1'  />
+       <input placeholder='Telefon raqamingizni kiriting' type="text" id='text2'  />     
        <h3>Jami : {data?.reduce((a,b)=>a+ (b.price*b.quantitiy), 0)}</h3>
        <button type="submit" >Olish</button>
        </form>
