@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-value: JSON.parse(localStorage.getItem("uzum-heart")) || []
+value: JSON.parse(localStorage.getItem("uzum-cart")) || []
 
 }
 
@@ -17,6 +17,8 @@ const cartSlide = createSlice({
         }else{
             state.value= state.value.map((item,inx) => inx === index ? {...item, quantitiy: item.quantitiy + 1} : item)
         }
+        localStorage.setItem("uzum-cart", JSON.stringify(state.value))
+
        },
        removeFromCart: ( state, action )=>{},
        decrementCart: (state,action)=>{
