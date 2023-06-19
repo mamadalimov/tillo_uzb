@@ -13,7 +13,17 @@ function CartWrapper({data}) {
     var text1 = document.getElementById("text1").value;
     var text2 = document.getElementById("text2").value;
 
-    var my_text = `Result is:%0A  Ismi: ${text1} %0A  Telfon raqami: ${text2} %0A Jami: ${data?.reduce((a,b)=>a+ (b.price*b.quantitiy), 0)} ` ;
+    let my_text = ` %0A Result is:%0AIsmi: ${text1} %0ATelfon raqami: ${text2} %0A` 
+    data?.forEach(item=>{
+      my_text+=`Nomi: ${item.title}%0A`
+      my_text+=`Soni: ${item.quantitiy}%0A`
+      my_text+=`Narxi: ${item.price}%0A%0A`
+    })
+    my_text += `Jami ${data?.reduce((a,b)=>a+ (b.price*b.quantitiy), 0)} so'm`  
+    
+
+
+
 
     var token = "6136164070:AAGMcY6F0Zcz-lpAUQwctsFFrTmMInRoT3o";
     var chat_id = -978459049;

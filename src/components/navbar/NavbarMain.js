@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { AiOutlineSearch, AiOutlineUser, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineMenu, AiOutlineHome } from "react-icons/ai"
 import {Link} from "react-router-dom"
+import SiteBar from '../sitebar/SiteBar'
+
 
 function NavbarMain() {
+    const [show, setShow] = useState(false)
     return (
+        <>
         <div className='container navbar__main'>
             <Link to={"/"} className="nav__logo">uzum market</Link>
-            <button className='nav__btn'>
+            <button onClick={()=>setShow(true)} className='nav__btn'>
                 <AiOutlineMenu />
                 <span>Katalog</span>
             </button>
@@ -33,6 +37,8 @@ function NavbarMain() {
                 </Link>
             </ul>
         </div>
+        <SiteBar show={show}  setShow={setShow} />
+        </>
     )
 }
 

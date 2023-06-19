@@ -1,0 +1,26 @@
+.sitebar__shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0006;
+    z-index: 10;
+
+}
+
+.sitebar {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 350px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 11;
+
+
+    transition: .3s ease;
+}
+.sitebar.show{
+left: 0;
+}
