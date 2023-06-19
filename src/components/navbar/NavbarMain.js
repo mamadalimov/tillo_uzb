@@ -6,6 +6,7 @@ import SiteBar from '../sitebar/SiteBar'
 
 function NavbarMain() {
     const [show, setShow] = useState(false)
+    document.body.style.overflow= show ? "hidden" : "auto"
     return (
         <>
         <div className='container navbar__main'>
