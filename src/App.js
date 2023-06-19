@@ -8,6 +8,7 @@ import Wishlist from "./router/wishlist/Wishlist"
 import Cart from './router/cart/Cart';
 import Account from './router/account/Account';
 import ProductInfo from './router/product-info/ProductInfo';
+import Admin from './router/admin/Admin';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/account' element={<Account />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/admin' element={<Admin />} />
         <Route path='/product/:id' element={<ProductInfo />} />
       </Routes>
       <Footer />

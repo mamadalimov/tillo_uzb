@@ -1,9 +1,15 @@
 import React from 'react'
 import { BsGooglePlay, BsApple, BsInstagram, BsTelegram, BsYoutube, BsFacebook } from "react-icons/bs"
 import "./Footer.css"
+import { useLocation } from 'react-router-dom'
+
 
 function Footer() {
+    const { pathname }=useLocation()
 
+    if(pathname.includes("/admin")){
+     return  <></>
+    }
     return (
         <div className='container'>
             <div className="footer__container">
