@@ -24,7 +24,7 @@ function NavbarMain() {
                     <AiOutlineHome />
                     <span>Bosh sahifa</span>
                 </Link>
-                <Link to={"/account"} className="nav__item">
+                <Link to={"/admin"} className="nav__item">
                     <AiOutlineUser />
                     <span>Kirish</span>
                 </Link>
