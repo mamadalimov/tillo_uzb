@@ -1,9 +1,11 @@
 import React from 'react'
 
+
+
 function NavbarBottom() {
 
     const DATA = [
-        "Elektronika",
+        " Elektronika",
         "Maishiy texnika",
         "Kiyim",
         "Poyabzal",
@@ -18,7 +20,7 @@ function NavbarBottom() {
     return (
         <div className='container'>
             <ul className="nav__bottom-collection">
-                {DATA?.map((item, id) => <li key={id} className="nav__bottom-item">{item}</li>)}
+                {DATA?.map((item, id) => <li key={id} className="nav__bottom-item"> {item}</li>)}
             </ul>
         </div>
     )

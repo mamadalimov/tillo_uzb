@@ -60,5 +60,5 @@ export const PRODUCTS = [
         title: "Ayollar krossovkalari GRN",
         price: 225_000 ,
         url: "https://images.uzum.uz/ci42gmrltlh4bk4litq0/original.jpg"
-    },
+    },  
 ]

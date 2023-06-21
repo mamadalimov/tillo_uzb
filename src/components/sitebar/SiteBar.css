@@ -24,12 +24,71 @@
 .sitebar.show{
 left: 0;
 }
+.site_collaction{
+padding: 5% 10%;
+}
 
+.item p{
+    font-size: 25px;
+}
+.item:hover{
+    color: var(--bg-py);
+    cursor: pointer;
+    transition: .5s;
+}
+.item{
+    
+    display: flex;
+    align-items: center;
+    height: 20px;
+
+    font-size: 17px;
+    gap: 20px;
+}
 
 @media screen and (max-width:600px) {
     .sitebar{
         width: 70%;
         left: -70%;
-
+        overflow: scroll;
+    }
+    .site_collaction{
+        padding: 5% 10%;
+    }
+}
+@media screen and (max-width:500px) {
+    .sitebar{
+        width: 70%;
+        left: -70%;
+    }
+    .site_collaction{
+        padding: 5% 10%;
+    }
+}
+@media screen and (max-width:450px) {
+    .sitebar{
+        width: 70%;
+        left: -70%;
+    }
+    .site_collaction{
+        padding: 5% 10%;
+    }
+}
+@media screen and (max-width:400px) {
+    .sitebar{
+        width: 70%;
+        left: -70%;
+    }
+    .site_collaction{
+        padding: 5% 10%;
+    }
+}
+@media screen and (max-width:350px) {
+    .sitebar{
+        width: 70%;
+        left: -70%;
+    }
+    .site_collaction{
+        padding: 7% 10%;
     }
 }

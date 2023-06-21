@@ -34,6 +34,10 @@
 
 .cart__wrapper_form button {
     padding: 2.5% 5.5%;
+    background-color: var(--bg-py);
+    color: white;
+    border: none;
+    border-radius: 6px;
 }
 .son button{
     background-color: transparent;
@@ -43,12 +47,13 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
+width: 50%;
 }
 .son{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+   width: 100%;
+   justify-content: space-around;
      
 }
 .count{
@@ -71,11 +76,15 @@
 @media screen and (max-width:990px) {
 
     .cart__wrapper {
-
+        text-align: center;
+     
         grid-template-columns: 1fr;
 
     }
+    .son2{
+width: 100%;
 
+    }
     .cart__wrapper-content {
         order: 2;
     }
@@ -85,6 +94,16 @@
         align-items: center;
         text-align: center;
     }
-
-
+    .cart{
+        display: block;
+    }
+     .cart img{
+        width: 130px;
+     }
+     .cart button{
+        font-size: 30px;
+     }
+     .count span{
+        font-size: 30px;
+     }
 }
