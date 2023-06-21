@@ -35,6 +35,9 @@ padding: 5% 10%;
     color: var(--bg-py);
     cursor: pointer;
     transition: .5s;
+}.item h3{
+    display: flex;
+    justify-content: space-around;
 }
 .item{
     
@@ -50,7 +53,7 @@ padding: 5% 10%;
     .sitebar{
         width: 70%;
         left: -70%;
-        overflow: scroll;
+       
     }
     .site_collaction{
         padding: 5% 10%;

@@ -12,8 +12,9 @@ function CartWrapper({data}) {
     e.preventDefault();
     var text1 = document.getElementById("text1").value;
     var text2 = document.getElementById("text2").value;
+    var text3 = document.getElementById("text3").value;
 
-    let my_text = ` %0A Result is:%0AIsmi: ${text1} %0ATelfon raqami: ${text2} %0A` 
+    let my_text = ` %0A Result is:%0AIsmi: ${text1} %0ATelfon raqami: ${text2} %0AUy manzil: ${text3} %0A` 
     data?.forEach(item=>{
       my_text+=`Nomi: ${item.title}%0A`
       my_text+=`Soni: ${item.quantitiy}%0A`
@@ -80,6 +81,8 @@ function CartWrapper({data}) {
        <h3>buyurtma berish</h3>
        <input placeholder='Ismingizni kiriting' type="text" id='text1'  />
        <input placeholder='Telefon raqamingizni kiriting' type="text" id='text2'  />     
+       <input placeholder='Manzilni kiritind' type="text" id='text3'  />
+
        <h3>Jami : {data?.reduce((a,b)=>a+ (b.price*b.quantitiy), 0)}</h3>
        <button type="submit" >Olish</button>
        </form>

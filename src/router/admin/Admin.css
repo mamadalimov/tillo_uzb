@@ -1,0 +1,14 @@
+.admin{
+    display: flex;
+    height: 100vh;
+}
+.admin__sidebar{
+    width: 350px;
+    height: 100%;
+    background-color: dodgerblue;
+}
+.admin__content{
+    flex: 1;
+    height: 100%;
+    border: 5px solid red;
+}
