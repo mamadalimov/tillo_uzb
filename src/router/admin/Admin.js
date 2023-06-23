@@ -3,16 +3,16 @@ import './Admin.css'
 import CreateProduct from './create-product/CreateProduct'
 import ManageProduct from './manage-product/ManageProduct'
 import { Routes, Route, NavLink,Link } from 'react-router-dom'
-
+import {BiLogOut} from 'react-icons/bi'
 
 function Admin() {
   return (
     <div className='admin' >
       <div className="admin__sidebar">
-      <Link to={"/"} >
-      <button>Go home</button>
-      </Link>
-        <h2>Admin Dashboard</h2>
+      
+         <div className="logo">
+         <Link to={"/"}><BiLogOut className='a1' /></Link> <h2> Admin Dashboard</h2>
+         </div>
         <ul className='admin__collactoin' >
           <li  className='admin__item' >
              <NavLink className='admin__link' to={`create-product`}>Create Product</NavLink>

@@ -19,6 +19,52 @@
     border-radius: 6px;
     border-radius: 1px solid transprent;
 }
+.a1{
+    font-size: 30px;
+}
+form{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 2%;
+    gap: 20px;
+    margin-left: 2%;
+    margin-top: 30px;
+}
+.create_product{
+    margin: 3% 30%;
+    width: 30%;
+    border: 2px solid red;
+display: flex;   
+
+text-align: center;
+flex-direction: column;
+justify-content: center;
+
+   
+}
+form button{
+    
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    width: 50%;
+    height: 30px;
+    margin: 2% 23%;
+    border-radius: 5px;
+}
+form input{
+    height: 30px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.admin h2{
+    align-items: center;
+    gap: 50px;
+}
 .admin__link.active{
     border: 1px solid #fff;
     background-color: #fff3;

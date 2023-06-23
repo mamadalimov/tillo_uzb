@@ -52,7 +52,7 @@
 }
 
 .skeleton__anime {
-    background: linear-gradient(90deg, #eee, #ddd, #eee);
+    background: linear-gradient(90deg, #ddd, white, #ddd);
     background-size: 200%;
     animation: skeleton 1s linear infinite;
 }

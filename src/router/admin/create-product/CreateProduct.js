@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react'
+import '../Admin.css'
+
+
 
 function CreateProduct() {
   const [title, setTitle] = useState("")
@@ -17,8 +20,8 @@ function CreateProduct() {
 
   return (
     <div className='create_product' >
-      <h2>CreateProduct</h2>
       <form onSubmit={handleSubmit} action="">
+      <h2>CreateProduct</h2>
         <input value={title} onChange={e=> setTitle(e.target.value)} required type="text" placeholder='title' />
         <input ref={price} required type="number" placeholder='price' />
         <input ref={url} required type="text" placeholder='url' />
