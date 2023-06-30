@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    margin: 4%;
     margin-top: 20px;
 }
 
@@ -9,6 +10,7 @@
     width: 236px;
     height: auto;
     display: flex;
+    gap: 30px;
     flex-direction: column;
     position: relative;
 }
@@ -22,7 +24,7 @@
 .card__image img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: .3s;
 }
 
@@ -34,6 +36,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 6px;
     font-size: 20px;
     border: none;
@@ -49,7 +54,9 @@
     flex-direction: column;
     flex-grow: 1;
 }
-
+.card__monthly h4{
+    font-weight: 400;
+}
 .card__title {
     font-size: 14px;
 }
@@ -62,21 +69,22 @@
 }
 
 .card__rating svg {
-    color: gold;
+    color: red;
 }
 
 .card__rating span {
-    font-size: 13px;
+    font-size: 10px;
     color: #999;
 }
 
 .card__monthly {
     flex-grow: 1;
+    margin-top: 20px;
 }
 
 .card__monthly span {
     display: inline-block;
-    background: var(--bg-gold);
+    background: red;
     font-size: 12px;
     padding: 4px 8px;
     border-radius: 4px;
@@ -84,7 +92,7 @@
 }
 
 .card__price {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -96,12 +104,13 @@
     font-style: 12px;
 }
 
-.price__cart {
+.price__cart{
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    color: white;
+    border-radius: 6px;
     border: 1px solid #ddd;
-    background: transparent;
+    background: red;
     font-size: 16px;
     padding-top: 2px;
     cursor: pointer;
@@ -114,7 +123,7 @@
     }
 
     .card {
-        width: auto;
+        width: 180px;
     }
 
     .card__image {

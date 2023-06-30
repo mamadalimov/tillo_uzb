@@ -8,10 +8,10 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 
-import banner1 from '../../assets/slider/banner-1.jpg'
-import banner2 from '../../assets/slider/banner-2.jpg'
-import banner3 from '../../assets/slider/banner-3.jpg'
-import banner4 from '../../assets/slider/banner-4.jpg'
+import banner1 from '../../assets/slider/1.png'
+import banner2 from '../../assets/slider/2.png'
+import banner3 from '../../assets/slider/3.png'
+import banner4 from '../../assets/slider/4.png'
 
 
 function Slider() {

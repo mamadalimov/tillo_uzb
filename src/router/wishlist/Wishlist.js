@@ -1,6 +1,7 @@
 import React from 'react'
 import Empty from "../../components/empty/Empty"
 import { useSelector } from 'react-redux'
+import Wishlist1 from '../../components/wishlist/Wishlist1';
 import ProductWrapper from '../../components/product-wrapper/ProductWrapper';
 
 function Wishlist() {
@@ -10,7 +11,7 @@ function Wishlist() {
         <div className='container'>
         {
             heart.length ?
-            <ProductWrapper data={heart} />
+            <Wishlist1 data={heart}/>
             : 
             <Empty title="Sevimlilar" />
         }

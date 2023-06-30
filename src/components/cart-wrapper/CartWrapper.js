@@ -1,8 +1,9 @@
 import React from 'react'
 import './CartWrapper.css'
-import {AiFillDelete} from "react-icons/ai"
+
 import {useDispatch} from 'react-redux'
 import { addToCart,removeFromHeart,decrementCart } from '../../context/cart';
+import { Link } from 'react-router-dom';
 
 
 
@@ -47,32 +48,42 @@ function CartWrapper({data}) {
       {
         data?.map((item)=> <div key={item.id} className='cart'  >
         <div className="kart2">
-        <img src={item.url} width={80} alt="" />
-        </div>
-        <div className="kart1">
-        <h3>{item.title}</h3><br />
+        <Link to={`/product/${item.id}`} state={item} >
+        <img src={item.url} width={120} alt="" />
         
-        <div className="son">
-        <div className="son4">
-        <h2>{item.quantitiy*item.price} so'm </h2>
+        </Link>
         </div>
-        <div className="son2">
+       
+        <div className="title">
+        <h3>{item.title}<br /><br />
+        <button onClick={()=> dispatch(removeFromHeart(item))} >Удалить</button>
+        
+        </h3><br />
+        </div>
+        <div className="mmm">
         <div className="count">
         <button disabled={item.quantitiy<= 1} onClick={()=> dispatch(decrementCart(item))} >-</button>
         <span>{item.quantitiy}</span>
         <button onClick={()=> dispatch(addToCart(item))} >+</button>
         </div>
-        <p>Jami: {item.price} so'm</p>
-        <button onClick={()=> dispatch(removeFromHeart(item))} ><AiFillDelete /></button>
+        <div className="price">
+        <h2>{item.price} so'm </h2>
         </div>
         </div>
         
+       
+        
+        
+        
+        
+        
+        
         
         <br />
         <br />
-        <hr />
+       
         <br />
-        </div>
+        
         </div> )
       }
       </div>

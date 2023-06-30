@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Navbar.css"
 import NavbarTop from './NavbarTop'
-import NavbarBottom from './NavbarBottom'
 import NavbarMain from './NavbarMain'
 import { useLocation } from 'react-router-dom'
 
@@ -12,12 +11,15 @@ function Navbar() {
    if(pathname.includes("/admin")){
     return  <></>
    }
+  
+   if(pathname.includes("/login")){
+     return  <></>
+    }
 
     return (
         <div>
             <NavbarTop />
             <NavbarMain />
-            <NavbarBottom />
         </div>
     )
 }

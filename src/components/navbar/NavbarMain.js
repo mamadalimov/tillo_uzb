@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { AiOutlineSearch, AiOutlineUser, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineMenu, AiOutlineHome } from "react-icons/ai"
 import {Link} from "react-router-dom"
 import SiteBar from '../sitebar/SiteBar'
-
+import { BsBarChartFill } from 'react-icons/bs'
 
 function NavbarMain() {
     const [show, setShow] = useState(false)
@@ -10,7 +10,7 @@ function NavbarMain() {
     return (
         <>
         <div className='container navbar__main'>
-            <Link to={"/"} className="nav__logo">uzum market</Link>
+            <Link to={"/"} className="nav__logo">Tillo market</Link>
             <button onClick={()=>setShow(true)} className='nav__btn'>
                 <AiOutlineMenu />
                 <span>Katalog</span>
@@ -24,7 +24,11 @@ function NavbarMain() {
                     <AiOutlineHome />
                     <span>Bosh sahifa</span>
                 </Link>
-                <Link to={"/admin"} className="nav__item">
+                <Link  className="nav__item">
+                    <BsBarChartFill />
+                    <span>Таққослаш</span>
+                </Link>
+                <Link to={"/admin/create-product"} className="nav__item">
                     <AiOutlineUser />
                     <span>Kirish</span>
                 </Link>

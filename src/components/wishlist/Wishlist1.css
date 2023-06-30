@@ -1,54 +1,48 @@
-.cart__wrapper {
+.cart__wrapper1 {
     padding: 30px 0 80px;
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    grid-gap: 16px;
-    align-self: start;
-    width: 100%;
+   border: none;
+    gap: 16px;
+ margin-left: 10%;
+   align-items: center;
+    width: 80%;
+    justify-content: center;
 }
-
-.cart__wrapper-content {
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 16px;
-    align-items: center;
+.buton{
+    width: 35%;
+    display: flex;
+    margin-left: 15%;
+    flex-direction: column;
+margin-top: 20%;
+gap: 20px;
+}
+.buton button{
+    background-color: red;
+    border: none;
+    color: white;
     width: 100%;
-
+    border-radius: 8px;
+    padding: 4%;
 
 }
+.price{
 
+    margin-left: 10%;
+}
 .kart1 {
-width: 100%;
+    quotes: 100%;
     display: flex;
     justify-content: space-around;
   
 }
 
-.cart__wrapper_form {
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 16px;
-    align-items: center;
-    text-align: center;
-    line-height: 40px;
-    width: 100%;
 
-}
-
-.cart__wrapper_form button {
-    padding: 2.5% 5.5%;
-    background-color: var(--bg-py);
-    color: white;
-    border: none;
-    border-radius: 6px;
+.cart__wrapper-content{
+    margin: 2%;
+    margin-top: 1%;
 }
 
 
-.cart button{
-    background-color: transparent;
-     border: none;
-     font-size: 25px;
-}
+
 .bbuu{
     margin-top: -15%;
 }
@@ -56,17 +50,19 @@ h3 button{
     color: gray;
     padding: auto;
 }
-.cart {
+.cart1 {
     display: flex;
     padding: 2%;
+  margin-top: 2%;
+    border: 2px solid black;
     justify-content: space-around;
 }
 .mmm{
     width: 50%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -10%;
 }
 .count{
     border: 3px solid black;
@@ -82,17 +78,21 @@ h3 button{
 
 @media screen and (max-width:990px) {
 
-    .cart__wrapper {
+    .cart__wrapper1 {
         text-align: center;
      
         grid-template-columns: 1fr;
+
+    }
+    .buton{
+margin-top: 10%;
 
     }
     .son2{
 width: 100%;
 
     }
-    .cart__wrapper-content {
+    .cart__wrapper-content1 {
         order: 2;
     }
     .title{
@@ -106,18 +106,18 @@ width: 100%;
         align-items: center;
         width: 100%;
     }
-    .cart__wrapper_form {
+    .cart__wrapper_form1 {
         order: 1;
         align-items: center;
         text-align: center;
     }
-    .cart{
+    .cart1{
         display: block;
     }
-     .cart img{
+     .cart1 img{
         width: 130px;
      }
-     .cart button{
+     .cart1 button{
         font-size: 30px;
      }
      .count span{

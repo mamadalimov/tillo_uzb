@@ -1,13 +1,16 @@
 .admin{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 .admin__sidebar{
     width: 350px;
-    height: 100%;
+    height: 100vh;
     background-color: dodgerblue;
     padding: 30px;
     color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 .admin__collection{
     margin-top: 50px;
@@ -34,7 +37,7 @@ form{
 .create_product{
     margin: 3% 30%;
     width: 30%;
-    border: 2px solid red;
+    
 display: flex;   
 
 text-align: center;
@@ -72,5 +75,5 @@ form input{
 .admin__content{
     flex: 1;
     height: 100%;
-    border: 5px solid red;
+   
 }
